@@ -1,0 +1,13 @@
+<footer class="footer">
+    <div>
+    {{ if contact.email }}
+        <p><a href="mailto:{{ contact.email }}">{{ contact.email }}</a></p>
+    {{ /if }}
+    {{ if contact.telephone }}
+        <p><a href="tel:{{ contact.telephone }}">{{ contact.telephone }}</a></p>
+    {{ /if }}
+    </div>
+    <div>
+        <p>Last Update: {{ "now" |> date("DATETIME") }}</p>
+    </div>
+</footer>

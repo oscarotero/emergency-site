@@ -1,32 +1,55 @@
 {
   "name": "emergency-site",
   "version": "1.0.0",
-  "description": "A boilerplate for emergency information websites",
-  "scripts": {
-    "build": "npm run clean && cross-env ELEVENTY_ENV=production eleventy",
-    "watch": "eleventy --watch",
-    "serve": "eleventy --serve",
-    "debug": "DEBUG=* eleventy",
-    "clean": "del-cli dist",
-    "start": "npm run clean && npm run serve"
-  },
-  "repository": {
-    "type": "git",
-    "url": "http://github.com/maxboeck/emergency-site"
-  },
-  "author": "Max Böck",
+  "description": "Lume theme for emergency information websites",
+  "keywords": [
+    "lume-theme"
+  ],
   "license": "MIT",
+  "author": "Max Böck",
+  "files": [
+    "build",
+    "CHANGELOG.md"
+  ],
+  "type": "module",
+  "exports": {
+    ".": "./mod.ts"
+  },
+  "scripts": {
+    "start": "lume build -s",
+    "build": "rm -rf package && tsc -p . && cp -r src build && pnpm pack --out=package.tgz && rm -rf build && tar -xzf package.tgz && rm package.tgz && node build.js && oxfmt package/*",
+    "fmt": "oxfmt ."
+  },
   "dependencies": {
-    "@11ty/eleventy": "^0.10.0",
-    "@11ty/eleventy-plugin-rss": "^1.0.7",
-    "clean-css": "^4.2.3",
-    "cross-env": "^7.0.2",
-    "del-cli": "^3.0.0",
-    "dotenv": "^8.2.0",
-    "eleventy-plugin-pwa": "^1.0.8",
-    "htmlnano": "^0.2.5",
-    "luxon": "^1.22.0",
-    "markdown-it": "^10.0.0",
-    "markdown-it-anchor": "^5.2.5"
-  }
+    "@lumeland/cms": "^1.0.0",
+    "@lumeland/plugin-base-path": "^1.0.0",
+    "@lumeland/plugin-cms": "^1.0.0",
+    "@lumeland/plugin-date": "^1.0.0",
+    "@lumeland/plugin-favicon": "^1.0.0",
+    "@lumeland/plugin-feed": "^1.0.0",
+    "@lumeland/plugin-inline": "^1.0.0",
+    "@lumeland/plugin-lightningcss": "^1.0.0",
+    "@lumeland/plugin-metas": "^1.0.0",
+    "@lumeland/plugin-pwa": "^1.0.0",
+    "@lumeland/plugin-robots": "^1.0.0",
+    "@lumeland/plugin-sitemap": "^1.0.0",
+    "date-fns": "^4.4.0"
+  },
+  "devDependencies": {
+    "@lumeland/lume": "^4.0.0",
+    "@types/node": "^26.6.6",
+    "oxfmt": "^0.75.0",
+    "typescript": "^7.0.2"
+  },
+  "peerDependencies": {
+    "@lumeland/core": "^1.0.2"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.14.0",
+      "onFail": "download"
+    }
+  },
+  "packageManager": "pnpm@12.14.0"
 }
