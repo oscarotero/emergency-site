@@ -23,6 +23,10 @@ cms.document({
 cms.collection({
   name: "Posts",
   store: "src:posts/*.md",
+  documentName(changes) {
+    const date = changes.date as Temporal.PlainDateTime;
+    return `/${date.toPlainDate()}-${changes.title}`;
+  },
   fields: [
     "title: text!",
     {
