@@ -12,7 +12,9 @@ import lumeCms from "@lumeland/plugin-cms";
 import { enUS } from "date-fns/locale/en-US";
 import cms from "./cms.ts";
 
-export interface Options {}
+export interface Options {
+  offline: boolean;
+}
 
 export default function (options?: Options) {
   return (site: Lume.Site) => {
@@ -46,6 +48,7 @@ export default function (options?: Options) {
     site.add("static");
     site.add("style.css");
     site.use(lumeCms({ cms }));
+    site.data("offline", options?.offline);
 
     // Add remote files
     site.remote("/", import.meta.resolve("./src"), ["_includes/**", "static/scripts", "posts/_data.yml", "*.vto", "*.css"]);

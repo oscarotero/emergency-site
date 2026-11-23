@@ -24,7 +24,7 @@
         <main class="main">{{ content }}</main>
         {{ include "footer.vto" }}
 
-        {{ if env === "production" }}
+        {{ if offline }}
         <script src="/static/scripts/offline.js" async defer></script>
         {{ /if }}
     </body>
