@@ -8,6 +8,7 @@ import favicon from "@lumeland/plugin-favicon";
 import date from "@lumeland/plugin-date";
 import inline from "@lumeland/plugin-inline";
 import lightningcss from "@lumeland/plugin-lightningcss";
+import minifyHTML from "@lumeland/plugin-minify-html";
 import lumeCms from "@lumeland/plugin-cms";
 import { enUS } from "date-fns/locale/en-US";
 import cms from "./cms.ts";
@@ -48,6 +49,7 @@ export default function (options?: Options) {
     site.add("static");
     site.add("style.css");
     site.use(lumeCms({ cms }));
+    site.use(minifyHTML());
     site.data("offline", options?.offline);
 
     // Add remote files

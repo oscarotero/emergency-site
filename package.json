@@ -30,6 +30,7 @@
     "@lumeland/plugin-inline": "^1.0.0",
     "@lumeland/plugin-lightningcss": "^1.0.0",
     "@lumeland/plugin-metas": "^1.0.0",
+    "@lumeland/plugin-minify-html": "^1.0.0",
     "@lumeland/plugin-pwa": "^1.0.0",
     "@lumeland/plugin-robots": "^1.0.0",
     "@lumeland/plugin-sitemap": "^1.0.0",

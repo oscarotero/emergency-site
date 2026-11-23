@@ -196,6 +196,9 @@ importers:
       '@lumeland/plugin-metas':
         specifier: ^1.0.0
         version: 1.0.0(@lumeland/core@1.0.5)
+      '@lumeland/plugin-minify-html':
+        specifier: ^1.0.0
+        version: 1.0.0(@lumeland/core@1.0.5)
       '@lumeland/plugin-pwa':
         specifier: ^1.0.0
         version: 1.0.0(@lumeland/core@1.0.5)(@types/node@26.6.6)
@@ -616,6 +619,11 @@ packages:
     peerDependencies:
       '@lumeland/core': ^1.0.0
 
+  '@lumeland/plugin-minify-html@1.0.0':
+    resolution: {integrity: sha512-l2zL8oN2USg7BJraQIONXxaBBVDvBWBYJmL3JL+itTVLs2uMlc+yxUg5JjF26x1ybbgt0g0juBKltozOTyIVbg==}
+    peerDependencies:
+      '@lumeland/core': ^1.0.0
+
   '@lumeland/plugin-modify-urls@1.0.0':
     resolution: {integrity: sha512-Y+CRg09m5NS8h60x0CuA215H6fLB7N6ITO49RtQUDdNy9JXof3jsvAS8J6QRMVBRzlPJTVIGTusXyXS+P9h73g==}
     peerDependencies:
@@ -683,6 +691,36 @@ packages:
 
   '@lumeland/ssx@0.1.16':
     resolution: {integrity: sha512-zk22w7DxAXWd/LyUJ8Hh26/JHduOz/+lEIFJ/5YwZUb6qVLyPVtSEsj0DpBizHXw2ryLtBniIEnjPiJRreEENg==}
+
+  '@minify-html/node-darwin-arm64@0.18.1':
+    resolution: {integrity: sha512-sc/VJHRcHtEk0IQP2hRA/TWkAQntaYH3RCw8n750NbfzliQqkyrDqNAGiKBOli7UlhFtG/H2aWqGjtOjIM/dZA==}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@minify-html/node-darwin-x64@0.18.1':
+    resolution: {integrity: sha512-0bff2ng4Vgp3+kdC8zgjd5dMN04zkM4nGuYEVP4dLR7J5NCD/Ka4XD4CKNSDZ9goLYQ8BjtKD6AeDTfJ8KBjrA==}
+    cpu: [x64]
+    os: [darwin]
+
+  '@minify-html/node-linux-arm64@0.18.1':
+    resolution: {integrity: sha512-CVGu5XVmmDrGFuA9/b/695rJBFvfTZFwKJJYA1ZXAsBZrqlKVO4bfXPq9DVNmhQ76ky3LFtVZ/+UsU7xpyK5Qw==}
+    cpu: [arm64]
+    os: [linux]
+
+  '@minify-html/node-linux-x64@0.18.1':
+    resolution: {integrity: sha512-qmIv4kRyhZTKO3nXDXHlFrhnmwIKTM57ZRomlYRYdZTWiFW3CbJ4Ggg57qIgx7D/t4dgyS7/O8OTetrWvmEg9w==}
+    cpu: [x64]
+    os: [linux]
+
+  '@minify-html/node-win32-x64@0.18.1':
+    resolution: {integrity: sha512-SNRE/NvcKXvh4UwXTRrujNSWaCj/3E+FFN+FLOBaN4FY+dZG83h6nWxGHJ5+LAoJxVTU7Al1e8toi4JjHpzv2w==}
+    cpu: [x64]
+    os: [win32]
+
+  '@minify-html/node@0.18.1':
+    resolution: {integrity: sha512-pNOv6z9zUDrjTU1+VcPOnDzGeaaqd6m9kbyHU+sg9O35450uzfke8ahx8gKlFdp/kQFrRn2rFIGAoANUZ62nSw==}
+    engines: {node: '>= 8.6.0'}
+    hasBin: true
 
   '@oxfmt/binding-android-arm-eabi@0.75.0':
     resolution: {integrity: sha512-zHJ7LcTN46/5mtoLxsUu14pdF9ixFwDURtmxZ0CeNwqom5qB5NRVqU6o2GRZ7QPdNBW8G6j9UTJzQ+EDevMH0w==}
@@ -1525,6 +1563,11 @@ snapshots:
     dependencies:
       '@lumeland/core': 1.0.5
 
+  '@lumeland/plugin-minify-html@1.0.0(@lumeland/core@1.0.5)':
+    dependencies:
+      '@lumeland/core': 1.0.5
+      '@minify-html/node': 0.18.1
+
   '@lumeland/plugin-modify-urls@1.0.0(@lumeland/core@1.0.5)':
     dependencies:
       '@lumeland/core': 1.0.5
@@ -1583,6 +1626,29 @@ snapshots:
       '@lumeland/core': 1.0.5
 
   '@lumeland/ssx@0.1.16': {}
+
+  '@minify-html/node-darwin-arm64@0.18.1':
+    optional: true
+
+  '@minify-html/node-darwin-x64@0.18.1':
+    optional: true
+
+  '@minify-html/node-linux-arm64@0.18.1':
+    optional: true
+
+  '@minify-html/node-linux-x64@0.18.1':
+    optional: true
+
+  '@minify-html/node-win32-x64@0.18.1':
+    optional: true
+
+  '@minify-html/node@0.18.1':
+    optionalDependencies:
+      '@minify-html/node-darwin-arm64': 0.18.1
+      '@minify-html/node-darwin-x64': 0.18.1
+      '@minify-html/node-linux-arm64': 0.18.1
+      '@minify-html/node-linux-x64': 0.18.1
+      '@minify-html/node-win32-x64': 0.18.1
 
   '@oxfmt/binding-android-arm-eabi@0.75.0':
     optional: true
