@@ -51,7 +51,13 @@ export default function (options?: Options) {
     site.data("offline", options?.offline);
 
     // Add remote files
-    site.remote("/", import.meta.resolve("./src"), ["_includes/**", "static/scripts", "posts/_data.yml", "*.vto", "*.css"]);
+    site.remote("/", import.meta.resolve("./src"), [
+      "_includes/**",
+      "static/scripts",
+      "posts/_data.yml",
+      "*.vto",
+      "*.css",
+    ]);
   };
 }
 

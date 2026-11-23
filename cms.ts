@@ -34,9 +34,9 @@ cms.collection({
       type: "datetime",
       init(field: Field) {
         field.value = new Date();
-      }
+      },
     },
-    "content: markdown"
+    "content: markdown",
   ],
 });
 
