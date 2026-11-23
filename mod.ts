@@ -66,6 +66,11 @@ export default function (options?: Options) {
 export const setup: Lume.Archetype = function* () {
   yield {
     url: import.meta.resolve("./src"),
-    files: ["_data.yml", "posts/*.md", "static/images/**"],
+    files: ["_data.yml", "posts/*.md", "favicon.svg"],
+  };
+
+  yield {
+    path: "/static/images/uploads/.gitkeep",
+    content: "",
   };
 };
