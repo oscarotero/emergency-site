@@ -48,13 +48,13 @@ export default function (options?: Options) {
     site.use(lumeCms({ cms }));
 
     // Add remote files
-    site.remote("/", import.meta.resolve("./src"), ["_includes/**"]);
+    site.remote("/", import.meta.resolve("./src"), ["_includes/**", "static/scripts", "posts/_data.yml", "*.vto", "*.css"]);
   };
 }
 
 export const setup: Lume.Archetype = function* () {
   yield {
     url: import.meta.resolve("./src"),
-    files: ["_data/*", "files/*"],
+    files: ["_data.yml", "posts/*.md", "static/images/**"],
   };
 };

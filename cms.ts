@@ -1,4 +1,5 @@
 import createCms from "@lumeland/cms";
+import type { Field } from "@lumeland/cms/types.ts";
 
 const cms = createCms();
 
@@ -22,7 +23,17 @@ cms.document({
 cms.collection({
   name: "Posts",
   store: "src:posts/*.md",
-  fields: ["title: text!", "date: current-datetime", "content: markdown"],
+  fields: [
+    "title: text!",
+    {
+      name: "date",
+      type: "datetime",
+      init(field: Field) {
+        field.value = new Date();
+      }
+    },
+    "content: markdown"
+  ],
 });
 
 cms.upload("Uploads", "src:static/images/uploads");
