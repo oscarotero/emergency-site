@@ -7,11 +7,11 @@ This is an example of how to publish critical information as posts on this websi
 
 ## Coronavirus (COVID-19): what you need to do
 
-* Stay at home
-* Only go outside for food, health reasons or work (but only if you cannot work from home)
-* Stay 2 meters (6ft) away from other people
-* Wash your hands as soon as you get home
-* You can spread the virus even if you don’t have symptoms.
+- Stay at home
+- Only go outside for food, health reasons or work (but only if you cannot work from home)
+- Stay 2 meters (6ft) away from other people
+- Wash your hands as soon as you get home
+- You can spread the virus even if you don’t have symptoms.
 
 ## Staying at home and away from others (social distancing)
 

@@ -20,23 +20,29 @@ export default function (options?: Options) {
     site.use(sitemap());
     site.use(pwa());
     site.use(metas());
-    site.use(feed({
-      output: ["/feed.xml", "/feed.json"],
-      query: "type=post",
-      info: {
-        title: "=metas.site",
-        description: "=metas.description",
-      }
-    }));
+    site.use(
+      feed({
+        output: ["/feed.xml", "/feed.json"],
+        query: "type=post",
+        info: {
+          title: "=metas.site",
+          description: "=metas.description",
+        },
+      }),
+    );
     site.use(favicon());
-    site.use(date({
-      locales: { enUS },
-    }));
+    site.use(
+      date({
+        locales: { enUS },
+      }),
+    );
     site.use(lightningcss());
     site.use(inline());
-    site.use(robots({
-      allow: "*",
-    }));
+    site.use(
+      robots({
+        allow: "*",
+      }),
+    );
     site.add("static");
     site.add("style.css");
     site.use(lumeCms({ cms }));

@@ -5,12 +5,12 @@ date: 2020-03-20T18:00
 
 To publish a website with this template, there are two options, depending on your technical skillset. Choose which one describes you best:
 
-* [I'm not a developer](#no-code-setup), I just want to set up a website
-* [I have basic knowledge](#advanced-setup) of how to use `npm` and the command line 
+- [I'm not a developer](#no-code-setup), I just want to set up a website
+- [I have basic knowledge](#advanced-setup) of how to use `npm` and the command line
 
 ## No-Code Setup
 
-You don't need any programming skills to set up a site with this template. 
+You don't need any programming skills to set up a site with this template.
 Following these steps, you can get started without touching any code:
 
 1. [Get a GitHub account](#get-a-github-account) (skip if you have one)
@@ -133,16 +133,16 @@ After you're set up, create a new user by inviting yourself via email. You can t
 
 For more information on Netlify CMS, [see the docs](https://www.netlifycms.org/docs/intro/).
 
---------
+---
 
 ## Advanced Setup
 
 If you feel comfortable setting up a local development environment, you can customize this template even further. Things you need to know:
 
-* Installing `Node` and `npm` packages on a local machine
-* Running basic commands on the command line
-* Writing content in markdown files
-* Basic understanding of static site generators like [Eleventy](https://11ty.dev) (optional) 
+- Installing `Node` and `npm` packages on a local machine
+- Running basic commands on the command line
+- Writing content in markdown files
+- Basic understanding of static site generators like [Eleventy](https://11ty.dev) (optional)
 
 ### Getting Started
 
@@ -155,23 +155,23 @@ $ rm -rf .git
 $ git init
 ```
 
-The build process requires [Node](https://nodejs.org/en/) v10 or higher on your system. 
+The build process requires [Node](https://nodejs.org/en/) v10 or higher on your system.
 To install the dependencies, run `npm install` in the root directory, where the `package.json` file is located. The project is now ready for development.
 
 ### Local Development
 
 You can run these on the command line in the root of your project:
 
-* `npm start`: starts development server
-* `npm run build`: generates a production build
-* `npm run debug`: runs eleventy with debug output
+- `npm start`: starts development server
+- `npm run build`: generates a production build
+- `npm run debug`: runs eleventy with debug output
 
 To customize the site, edit `src/data/meta.js` with your details, or set the corresponding [environment variables](#configure-your-site) in a new `.env` file in the root folder of the project.
 
 ### Deployment
 
-The easiest way to deploy is by forking [this repository](https://github.com/maxboeck/emergency-site) and deploying it to Netlify. You can do that by clicking this button:  
+The easiest way to deploy is by forking [this repository](https://github.com/maxboeck/emergency-site) and deploying it to Netlify. You can do that by clicking this button:
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/maxboeck/emergency-site) 
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/maxboeck/emergency-site)
 
 If you don't want to use Netlify, you can also host the site on your own server or on cloud infrastructure like an S3 Bucket. In that case, set up your own process to host the generated output folder `dist` at your domain.

@@ -2,7 +2,7 @@ metas:
   site: Emergency Site
   description: An emergency information website.
   lang: en
-  color: '#f2073c'
+  color: "#f2073c"
 contact:
   email: contact@example.com
-  telephone: '000111222'
+  telephone: "000111222"
